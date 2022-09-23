@@ -1,0 +1,26 @@
+{
+  "name": "rent-a-bike",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "prestart": "yarn build:styles",
+    "build:styles": "sass public/stylesheets/scss/*.scss public/stylesheets/styles.css",
+    "watch:styles": "sass public/stylesheets/scss/*.scss public/stylesheets/styles.css --watch",
+    "dev": "yarn watch:styles & nodemon ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.2",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "mongoose": "^6.6.1",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "sass": "^1.55.0"
+  }
+}
